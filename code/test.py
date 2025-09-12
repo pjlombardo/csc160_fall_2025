@@ -13,7 +13,7 @@ def test_fxn(num):
     return num*MAIN_VAR
 
 def main():
-    # global MAIN_VAR
+    global MAIN_VAR
     MAIN_VAR = 10
     print(test_fxn(3))
 
