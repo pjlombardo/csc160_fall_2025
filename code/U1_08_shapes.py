@@ -10,7 +10,9 @@ import turtle
 # Improve: remove magic numbers
 # introduce global variables
 FORWARD_LENGTH = 50
+PENTAGRAM_ANGLE= 2*72
 PENTAGON_TURN_ANGLE = 72
+PENTAGRAM_LENGTH = 80
 
 def draw_pentagon(turtle):
     """Draws a pentagon on the canvas
@@ -31,7 +33,16 @@ def draw_pentagon(turtle):
     return None
 
 def draw_pentagram(turtle):
-    # put our code for the pentaGRAM here
+    turtle.left(PENTAGON_TURN_ANGLE)
+    turtle.forward(PENTAGRAM_LENGTH)
+    turtle.right(PENTAGRAM_ANGLE)
+    turtle.forward(PENTAGRAM_LENGTH)
+    turtle.right(PENTAGRAM_ANGLE)
+    turtle.forward(PENTAGRAM_LENGTH)
+    turtle.right(PENTAGRAM_ANGLE)
+    turtle.forward(PENTAGRAM_LENGTH)
+    turtle.right(PENTAGRAM_ANGLE)
+    turtle.forward(PENTAGRAM_LENGTH)
     return None
 
 # Can we make the pentagram fit perfectly with corners
@@ -45,6 +56,7 @@ def main():
 
     # How can we make the turtle draw a pentagon 
     draw_pentagon(pat)
+    draw_pentagram(pat)
 
 
     
