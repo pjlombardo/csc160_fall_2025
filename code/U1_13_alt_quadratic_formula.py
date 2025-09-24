@@ -17,7 +17,7 @@ def quadratic_formula(a, b, c):
         ...please finish the docstring for this function
     
     Return:
-        solution (tuple):   This may be empty, have one element, or two
+        solution (list):   This may be empty, have one element, or two
                             depending on the value of b^2 - 4*a*c
     """
     discriminant = b**2 - 4*a*c
@@ -26,14 +26,14 @@ def quadratic_formula(a, b, c):
         solution_1 = (-b + math.sqrt(discriminant)) / (2 * a)
         solution_2 = (-b - math.sqrt(discriminant)) / (2 * a)
         
-        return (solution_1, solution_2)
+        return [solution_1, solution_2]
     elif discriminant < 0:
         # no real solutions
-        return ()
+        return []
     else:
         # one real solution
         solution = -b / (2 * a)
-        return (solution)
+        return [solution]
     
 def print_result(solution_tuple):
     """ Take a tuple with the solution to a quadratic formula problem
@@ -49,8 +49,8 @@ def print_result(solution_tuple):
     # if the tuple is empty: print no real roots exist
     # else if the tuple has one element, print there is only one root, it is ....
     # else if the tuple has two elemetns, print there are two roots, they are ... and ...
-    if isinstance(solution_tuple, float):
-        print(f"There is one solution; it is {solution_tuple}.")
+    if len(solution_tuple)==1:
+        print(f"There is one solution; it is {solution_tuple[0]}.")
     elif len(solution_tuple) == 0:
         print("There are no real solutions to this quadratic.")
     else:

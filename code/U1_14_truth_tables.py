@@ -46,7 +46,7 @@ def print_three_bool_truth_table(three_bool_expression_fxn):
 # Modify the return statements below with your 
 # boolean expressions, or create your own function
 def two_bool_expression_fxn(p,q):
-    return p and q
+    return p and (not q)
 
 def three_bool_expression_fxn(p,q,r):
     
@@ -60,11 +60,11 @@ def three_bool_expr2(p,q,r):
 # print_***_bool_truth_table() functions.
 
 def main():
-    print_two_bool_truth_table(two_bool_expression_fxn)
-    print()
+    # print_two_bool_truth_table(two_bool_expression_fxn)
+    # print()
     print_three_bool_truth_table(three_bool_expression_fxn)
     print()
-    print_three_bool_truth_table(three_bool_expr2)
+    # print_three_bool_truth_table(three_bool_expr2)
 
 if __name__=="__main__":
     main()

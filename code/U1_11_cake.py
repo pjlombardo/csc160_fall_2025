@@ -19,7 +19,7 @@ def main():
     # else:
     #     print("OK, I'll go get your cake.")
 
-    # three brnaches
+    # three branches
     if slice_count <= 0:
         print("Come on, have some cake!")
     elif slice_count <= 2.5:
